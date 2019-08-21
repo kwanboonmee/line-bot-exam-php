@@ -13,7 +13,7 @@ $pushID = 'Uaf58a1c60a6c42de63d261e34642e15a';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hi my name is Kwan');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('This is broadcasting message from iGroup Thailand, we are open on Monday-Saturday.');
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
